@@ -7,6 +7,7 @@ A small RemNote plugin that lets AI agents (Claude Code, Codex, or anything else
 - heading size (H1/H2/H3)
 - moving rems, turning a rem into a document
 - adding a source (e.g. a PDF) to a rem
+- tagging rems (e.g. *Extra Card Detail*)
 
 It's built for one person's study workflow and works as-is. It has no UI. It's event-driven: nothing runs until an agent queues work.
 
@@ -45,6 +46,7 @@ It's built for one person's study workflow and works as-is. It has no UI. It's e
 | `setIsDocument` | `rem`, `value` | make or unmake a document |
 | `addSource` | `rem`, `source` | add a source rem (e.g. a PDF) |
 | `setHighlightColor` | `rem`, `color` | whole-rem highlight |
+| `addTag` | `rem`, `tag` (rem id) | tag a rem, e.g. with *Extra Card Detail* (the MCP's own tag tool doesn't persist the tag) |
 
 RichText formatting keys: `b` bold, `l` italic, `u` underline, `sup`/`sub`, `tc` text colour, `h` highlight. Colour numbers: 1 red, 2 orange, 3 yellow, 4 green, 5 purple, 6 blue, 7 gray, 8 brown, 9 pink.
 

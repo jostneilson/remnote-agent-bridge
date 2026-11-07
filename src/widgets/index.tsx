@@ -22,6 +22,7 @@
  *   {op:"setFontSize", rem, size: "H1"|"H2"|"H3"|null}
  *   {op:"addSource", rem, source}
  *   {op:"setHighlightColor", rem, color}
+ *   {op:"addTag", rem, tag}                               tag a rem (tag = rem id, e.g. Extra Card Detail)
  * Safety: text/image ops refuse rems that hold flashcard data (cloze ids, back text, occlusion
  * blocks). Only rems inside QUEUE_DOC are read as instructions. Nothing leaves RemNote.
  */
@@ -200,6 +201,9 @@ async function applyOp(plugin: ReactRNPlugin, o: Op) {
       return;
     case 'addSource':
       await rem.addSource(o.source);
+      return;
+    case 'addTag':
+      await rem.addTag(o.tag);
       return;
     case 'setHighlightColor':
       await rem.setHighlightColor(o.color);
