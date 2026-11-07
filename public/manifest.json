@@ -1,22 +1,23 @@
 {
   "manifestVersion": 1,
-  "id": "plugin_template",
-  "name": "Plugin Template",
-  "author": "remnote",
-  "repoUrl": "",
+  "id": "agent_bridge_jn",
+  "name": "Agent Bridge",
+  "author": "Jost Neilson",
+  "repoUrl": "https://github.com/jostneilson/remnote-agent-bridge",
   "version": {
     "major": 0,
-    "minor": 0,
-    "patch": 1
+    "minor": 1,
+    "patch": 0
   },
   "theme": [],
   "enableOnMobile": false,
-  "description": "",
+  "description": "Lets AI agents using the RemNote MCP apply edits it can't: multi-line rich text, image size, headings, moves, sources. Event-driven; never edits flashcards.",
   "requestNative": false,
   "requiredScopes": [
     {
       "type": "All",
-      "level": "Read"
+      "level": "ReadCreateModifyDelete"
     }
-  ]
+  ],
+  "unlisted": true
 }

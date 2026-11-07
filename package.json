@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "remnote-plugin-template-react",
+  "name": "remnote-agent-bridge",
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
@@ -9,7 +9,7 @@
     "build": "npx remnote-plugin validate && shx rm -rf dist && cross-env NODE_ENV=production webpack --color --progress && cd dist && bestzip ../PluginZip.zip ./*"
   },
   "dependencies": {
-    "@remnote/plugin-sdk": "latest",
+    "@remnote/plugin-sdk": "^0.0.46",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -39,5 +39,8 @@
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.3"
+  },
+  "allowScripts": {
+    "esbuild@0.14.48": true
   }
 }
